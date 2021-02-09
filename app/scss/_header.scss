@@ -1,0 +1,31 @@
+.header {
+   nav {
+       width: 90%;
+   height: 10vh;
+   margin: 0 auto;
+      color: rgb(255, 255, 255);
+   }
+   &__logo {
+   }
+   &__menu {
+      > span {
+         display: block;
+         width: 28px;
+         height: 4px;
+         background-color: rgb(255, 255, 255);
+         transition: 0.3s ease-in-out;
+         &:not(:last-child) {
+            margin-bottom: 4px;
+         }
+         &:nth-child(2) {
+            width: 20px;
+            margin-left: 10px;
+         }
+         &:hover {
+            width: 28px;
+            margin-left: 0;
+            transition: 0.3s ease-in-out;
+         }
+      }
+   }
+}
