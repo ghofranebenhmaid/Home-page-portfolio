@@ -1,9 +1,9 @@
 .header {
    nav {
-       width: 90%;
-   height: 10vh;
-   margin: 0 auto;
-      color: rgb(255, 255, 255);
+      width: 90%;
+      height: 10vh;
+      margin: 0 auto;
+      color: var(--font-color);
    }
    &__logo {
    }
@@ -12,7 +12,7 @@
          display: block;
          width: 28px;
          height: 4px;
-         background-color: rgb(255, 255, 255);
+         background-color: var(--font-color);
          transition: 0.3s ease-in-out;
          &:not(:last-child) {
             margin-bottom: 4px;

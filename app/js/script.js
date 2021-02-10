@@ -41,7 +41,34 @@ function checkboundary ()
 
     if (parseInt(innerSlider.style.left) > 0) {
         innerSlider.style.left = '0px';
-    } else if (inner.right < outer.right) {
-        innerSlider.style.left = `-${ inner.width - outer.width }px`
+    } else if (inner.right > outer.right) {
+        innerSlider.style.left = `${ inner.width - outer.width }px`
     }
 }
+
+// function myFunction() {
+//    var element = document.body;
+//    element.classList.toggle("dark-mode");
+// }
+function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-light');
+            } else {
+                setTheme('theme-dark');
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-dark') {
+                setTheme('theme-dark');
+            } else {
+                setTheme('theme-light');
+            }
+        })();
